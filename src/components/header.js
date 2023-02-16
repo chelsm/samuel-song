@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react'
+import React from 'react'
 import Logo from '../static/icon/logo.svg'
 import { makeStyles } from '@material-ui/core'
 

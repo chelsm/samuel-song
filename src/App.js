@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React from 'react'
 import Header from './components/header'
+import Projet from './components/project'
 import { makeStyles } from '@material-ui/core'
 import { Typography } from '@material-ui/core'
 
@@ -66,20 +67,21 @@ function App() {
             <div className={classes.nameContainer}>
               <Typography variant="h1" className={classes.name}>
                 sam
-                <Typography variant="span" className={classes.dot}>
+                <span className={classes.dot}>
                   .
-                </Typography>
+                </span>
               </Typography>
-              <Typography variant="span" className={classes.job}>
+              <span className={classes.job}>
                 concepteur <br />joaillier cao
-              </Typography>
+              </span>
             </div>
           </div>
         </div>
-        <Typography variant="p" className={classes.presentation}>
+        <p className={classes.presentation}>
           Titulaire d'une Licence Professionnelle en Innovation et Développement Industriel CAO, je suis à la recheche d’un poste qui pourrait atteindre mes objectifs dans le monde de la joaillerie.
-        </Typography>
+        </p>
       </div>
+      <Projet />
     </div>
 
   );
