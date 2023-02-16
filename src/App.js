@@ -1,24 +1,87 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useRef, useEffect } from 'react'
+import Header from './components/header'
+import { makeStyles } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
+
+const useStyles = makeStyles({
+  root: {
+    height: '100%',
+    background: 'var(--milk-color)'
+  },
+  presentationView:{
+    height: '120vh'
+  },
+  homeView: {
+    height: '100vh'
+  },
+  presentationContainer: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+  },
+  nameContainer: {
+    position: 'relative',
+  },
+  name: {
+    fontFamily: 'Chonburi',
+    fontWeight: 400,
+    fontSize: '10em',
+    cursor: 'default',
+  },
+  dot: {
+    color: 'var(--flash-orange)',
+  },
+  job: {
+    color: 'var(--baby-blue)',
+    fontFamily: 'Poppins-Bold',
+    fontSize: 27,
+    position: 'absolute',
+    left: '80%',
+    width: '100%',
+    bottom: '-55px'
+  },
+  presentation: {
+    fontFamily: 'Poppins-Regular',
+    fontSize: 16,
+    color: 'var(--dark-gray)',
+    width: '80%',
+    display: 'block',
+    textAlign: 'center',
+    margin: ' 0 auto'
+  }
+})
+
 
 function App() {
+
+  const classes = useStyles()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.root}>
+      <div className={classes.presentationView}>
+        <div className={classes.homeView}>
+          <Header />
+          <div className={classes.presentationContainer}>
+            <div className={classes.nameContainer}>
+              <Typography variant="h1" className={classes.name}>
+                sam
+                <Typography variant="span" className={classes.dot}>
+                  .
+                </Typography>
+              </Typography>
+              <Typography variant="span" className={classes.job}>
+                concepteur <br />joaillier cao
+              </Typography>
+            </div>
+          </div>
+        </div>
+        <Typography variant="p" className={classes.presentation}>
+          Titulaire d'une Licence Professionnelle en Innovation et Développement Industriel CAO, je suis à la recheche d’un poste qui pourrait atteindre mes objectifs dans le monde de la joaillerie.
+        </Typography>
+      </div>
     </div>
+
   );
 }
 
