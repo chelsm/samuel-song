@@ -31,7 +31,7 @@ const useStyles = makeStyles({
 function Projet() {
   const classes = useStyles()
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="projet">
       <Typography variant="h2" className={classes.title}>
         mes projets
       </Typography>

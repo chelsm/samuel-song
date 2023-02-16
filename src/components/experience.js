@@ -4,12 +4,11 @@ import { Typography } from '@material-ui/core'
 
 const useStyles = makeStyles({
     root: {
-        height: '100vh',
         display: 'flex',
-        gap: '5%',
+        gap: 64,
         flexDirection: 'column',
         alignItems: 'center',
-        padding: '7% 5%',
+        padding: '5%',
     },
     title: {
         color: 'var(--baby-blue)',
@@ -21,7 +20,7 @@ const useStyles = makeStyles({
         gridTemplateColumns: 'repeat(2, 1fr)',
         gridTemplateRows: 'repeat(2, 1fr)',
         gridColumnGap: 62,
-        gridRowGap: 34,
+        gridRowGap: 62,
 
     },
     jobCard: {
@@ -99,7 +98,7 @@ function Exp() {
 
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} id="exp">
             <Typography variant="h2" className={classes.title}>
                 mes experiences professionnelles
             </Typography>

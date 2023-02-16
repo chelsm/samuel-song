@@ -30,13 +30,26 @@ const useStyles = makeStyles({
 
 function Header() {
     const classes = useStyles()
+
+    const scrollToProjet = () => {
+        const comp = document.getElementById("projet");
+        comp.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
+      }
+      const scrollToExp = () => {
+        const exp = document.getElementById("exp");
+        exp.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
+      }
+      const scrollToCont = () => {
+        const cont = document.getElementById("cont");
+        cont.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
+      }
   return (
     <header className={classes.root}>
         <img src={Logo} className="App-logo" alt="logo"/>
         <ul className={classes.listLinks}>
-            <li><a>projets</a></li>
-            <li><a>expériences</a></li>
-            <li ><a>me contacter</a></li>
+            <li onClick={()=>scrollToProjet()}><a>projets</a></li>
+            <li onClick={()=>scrollToExp()}><a>expériences</a></li>
+            <li onClick={()=>scrollToCont()}><a>me contacter</a></li>
             
         </ul>
     </header>

@@ -2,15 +2,18 @@ import React from 'react'
 import Header from './components/header'
 import Projet from './components/project'
 import Experience from './components/experience'
+import Footer from './components/footer'
+import Contact from './components/contact'
 import { makeStyles } from '@material-ui/core'
 import { Typography } from '@material-ui/core'
+import Deco from './static/icon/deco.svg'
 
 const useStyles = makeStyles({
   root: {
     height: '100%',
     background: 'var(--milk-color)'
   },
-  presentationView:{
+  presentationView: {
     height: '120vh'
   },
   homeView: {
@@ -51,7 +54,12 @@ const useStyles = makeStyles({
     display: 'block',
     textAlign: 'center',
     margin: ' 0 auto'
-  }
+  },
+  decoration: {
+    position: 'absolute', 
+    right:0,
+    height: 280,
+  }, 
 })
 
 
@@ -81,9 +89,13 @@ function App() {
         <p className={classes.presentation}>
           Titulaire d'une Licence Professionnelle en Innovation et Développement Industriel CAO, je suis à la recheche d’un poste qui pourrait atteindre mes objectifs dans le monde de la joaillerie.
         </p>
+        <img src={Deco} alt='' className={classes.decoration} />
       </div>
       <Projet />
-      <Experience/>
+      <Experience />
+      <Contact/>
+      <Footer/>
+
     </div>
 
   );
