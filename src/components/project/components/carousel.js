@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
-import { Typography , Button} from '@material-ui/core'
+import { Typography, Button } from '@material-ui/core'
 import Carousel from 'react-elastic-carousel';
 import Flower1 from '../../../static/images/jowelery/flower_1.svg'
 import Flower2 from '../../../static/images/jowelery/flower_2.svg'
@@ -23,20 +23,20 @@ const useStyles = makeStyles({
         '& .rec.rec-arrow': {
             display: 'none'
         },
-       '& .rec-dot': {
-            backgroundColor:'var(--milk-color)',
+        '& .rec-dot': {
+            backgroundColor: 'var(--milk-color)',
             boxShadow: '0 0 1px 3px var(--milk-color)',
             height: 7,
             width: 7,
         },
         '& .rec-dot:active': {
-            backgroundColor:'var(--baby-blue)',
+            backgroundColor: 'var(--baby-blue)',
             boxShadow: '0 0 1px 3px var(--baby-blue)',
             height: 7,
             width: 7,
         },
         '& .rec-dot_ctive': {
-            backgroundColor:'var(--baby-blue)',
+            backgroundColor: 'var(--baby-blue)',
             boxShadow: '0 0 1px 3px var(--baby-blue)',
             height: 10,
             width: 10,
@@ -49,7 +49,7 @@ const useStyles = makeStyles({
         padding: '55px 50px',
         backgroundColor: 'var(--milk-color)',
         height: 'auto',
-        width: '100%',
+        width: 900,
         margin: '0px 20px',
         color: 'blue',
         borderRadius: 16,
@@ -69,16 +69,18 @@ const useStyles = makeStyles({
     img: {
         height: 350,
         maxWidth: 200,
+        '-webkit-user-drag': 'none',
+        userDrag: 'none',
     },
-    btnSeePlan:{
+    btnSeePlan: {
         padding: '8px 25px',
         width: 'fit-content',
-        background: '#7AAFED', 
+        background: '#7AAFED',
         color: 'var(--dark-gray)',
         textTransform: 'none',
-  fontFamily: 'Poppins-Bold',
+        fontFamily: 'Poppins-Bold',
     },
-    containerBtn:{
+    containerBtn: {
         display: 'flex',
         justifyContent: 'flex-end',
     }
@@ -93,7 +95,7 @@ function Projet() {
             label: "La boucle d'oreille torsadée en or ",
             img1: Twist1,
             img2: Twist2,
-            img3: Twist3, 
+            img3: Twist3,
             url: PdfTwist
         },
         {
@@ -102,7 +104,6 @@ function Projet() {
             img2: Pearl2,
             img3: Pearl3,
             url: PdfPearl
-
         },
         {
             label: "La bague à fleurs",
@@ -110,7 +111,6 @@ function Projet() {
             img2: Flower2,
             img3: Flower3,
             url: PdfFlower
-
         }
     ]
 
@@ -129,11 +129,11 @@ function Projet() {
                         </div>
 
                         <div className={classes.containerBtn}>
-                        <Button className={classes.btnSeePlan} href={item.url} target="_blank">
-                            voir le plan
-                        </Button>
+                            <Button className={classes.btnSeePlan} href={item.url} target="_blank">
+                                voir le plan
+                            </Button>
                         </div>
-                        
+
                     </article>
                 ))}
             </Carousel>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './components/header'
 import Projet from './components/project'
+import Experience from './components/experience'
 import { makeStyles } from '@material-ui/core'
 import { Typography } from '@material-ui/core'
 
@@ -82,6 +83,7 @@ function App() {
         </p>
       </div>
       <Projet />
+      <Experience/>
     </div>
 
   );
