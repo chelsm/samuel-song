@@ -43,7 +43,7 @@ const useStyles = makeStyles({
     fontSize: 27,
     position: 'absolute',
     left: '80%',
-    width: '100%',
+    width: 'max-content',
     bottom: '-55px'
   },
   presentation: {
@@ -56,10 +56,27 @@ const useStyles = makeStyles({
     margin: ' 0 auto'
   },
   decoration: {
-    position: 'absolute', 
-    right:0,
+    position: 'absolute',
+    right: 0,
     height: 280,
-  }, 
+
+  },
+  '@media screen and (max-width: 700px)': {
+    name: {
+      fontSize: '7em'
+    },
+    job: {
+      fontSize: 23,
+      left: '60%',
+      width: 'max-content'
+    },
+    presentation: {
+      fontSize: 14,
+    },
+    decoration: {
+      height: 150,
+    }
+  }
 })
 
 
@@ -93,8 +110,8 @@ function App() {
       </div>
       <Projet />
       <Experience />
-      <Contact/>
-      <Footer/>
+      <Contact />
+      <Footer />
 
     </div>
 

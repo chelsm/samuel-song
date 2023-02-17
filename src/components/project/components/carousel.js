@@ -18,7 +18,6 @@ import PdfTwist from '../../../static/documents/plan_boucle_torsade.pdf'
 
 const useStyles = makeStyles({
     root: {
-        height: '400px',
         width: '105%',
         '& .rec.rec-arrow': {
             display: 'none'
@@ -83,6 +82,19 @@ const useStyles = makeStyles({
     containerBtn: {
         display: 'flex',
         justifyContent: 'flex-end',
+    },
+    '@media screen and (max-width: 700px)': {
+        card:{
+            width: '-webkit-fill-available',
+            padding: '35px 30px'
+        },
+        img:{
+            height: 250,
+            maxWidth: 100,
+        },
+        btnSeePlan:{
+            padding: '4px 20px'
+        }
     }
 })
 

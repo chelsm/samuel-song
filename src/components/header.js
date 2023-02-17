@@ -3,7 +3,7 @@ import Logo from '../static/icon/logo.svg'
 import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles({
-    root:{
+    root: {
         padding: 40,
         display: 'flex',
         flexDirection: 'row',
@@ -11,20 +11,32 @@ const useStyles = makeStyles({
     },
     listLinks: {
         display: 'flex',
-        listStyle:'none',
+        listStyle: 'none',
         gap: '5em',
         '& a': {
-            textDecoration:'none',
+            textDecoration: 'none',
             fontFamily: 'Chonburi',
             color: 'var(--dark-gray)',
-            fontWeight:'bold',
+            fontWeight: 'bold',
             '&:hover': {
-            cursor:'pointer',
-            color: 'var(--flash-orange)',
+                cursor: 'pointer',
+                color: 'var(--flash-orange)',
 
             }
         }
     },
+    '@media screen and (max-width: 700px)': {
+        root:{
+            alignItems: 'flex-start'
+        },
+        listLinks: {
+            fontSize: 12,
+            gap: '1em',
+            flexDirection: 'column',
+            alignItems: 'flex-end',
+            margin: 0
+        },
+    }
 })
 
 
@@ -33,27 +45,27 @@ function Header() {
 
     const scrollToProjet = () => {
         const comp = document.getElementById("projet");
-        comp.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
-      }
-      const scrollToExp = () => {
+        comp.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" })
+    }
+    const scrollToExp = () => {
         const exp = document.getElementById("exp");
-        exp.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
-      }
-      const scrollToCont = () => {
+        exp.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" })
+    }
+    const scrollToCont = () => {
         const cont = document.getElementById("cont");
-        cont.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
-      }
-  return (
-    <header className={classes.root}>
-        <img src={Logo} className="App-logo" alt="logo"/>
-        <ul className={classes.listLinks}>
-            <li onClick={()=>scrollToProjet()}><a>projets</a></li>
-            <li onClick={()=>scrollToExp()}><a>expériences</a></li>
-            <li onClick={()=>scrollToCont()}><a>me contacter</a></li>
-            
-        </ul>
-    </header>
-  );
+        cont.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" })
+    }
+    return (
+        <header className={classes.root}>
+            <img src={Logo} className="App-logo" alt="logo" />
+            <ul className={classes.listLinks}>
+                <li onClick={() => scrollToProjet()}><a>projets</a></li>
+                <li onClick={() => scrollToExp()}><a>expériences</a></li>
+                <li onClick={() => scrollToCont()}><a>me contacter</a></li>
+
+            </ul>
+        </header>
+    );
 }
 
 export default Header;

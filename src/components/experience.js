@@ -8,12 +8,13 @@ const useStyles = makeStyles({
         gap: 64,
         flexDirection: 'column',
         alignItems: 'center',
-        padding: '5%',
+        padding: '64px 5%',
     },
     title: {
         color: 'var(--baby-blue)',
         fontFamily: 'Chonburi',
-        fontSize: 27
+        fontSize: 27,
+        textAlign: 'center'
     },
     jobContainer: {
         display: 'grid',
@@ -52,8 +53,19 @@ const useStyles = makeStyles({
         fontWeight: 400,
         fontSize: 14,
         color: 'var(--dark-gray)'
+    },
+    '@media screen and (max-width: 700px)': {
+        title: {
+            fontSize: 23
+        },
+        jobContainer: {
+            display: 'grid',
+            gridTemplateColumns: '1fr',
+            gridTemplateRows: 'repeat(4, 1fr)',
+            gridColumnGap: 0,
+            gridRowGap: 20,
+        }
     }
-
 })
 
 

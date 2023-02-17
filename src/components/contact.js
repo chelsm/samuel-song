@@ -100,6 +100,34 @@ const useStyles = makeStyles({
 
         }
     },
+    sendMsg: {
+        fontFamily: 'Poppins-Bold',
+        color: 'var(--flash-orange)',
+        fontSize: ' 1rem',
+    },
+    '@media screen and (max-width: 700px)': {
+        root:{
+            gap: '10vh'
+        },
+        decoration: {
+            height: 150,
+        },
+        title: {
+            fontSize: 23
+        },
+        caption:{
+            display: 'none'
+        }, 
+        containerform:{
+            top: '50%',
+            width: '90%',
+            left: '50%',
+        }, 
+        containerRed:{
+            height: 510
+        }
+    }
+
 
 })
 
@@ -123,32 +151,41 @@ function Contact() {
                         get in <br />touch
                     </span>
                     <div className={classes.containerform}>
-                    <form className={classes.myform} onSubmit={handleSubmit}>
-                        <div className={classes.inputFields}>
-                            <input id="email" type="email" name="email" placeholder="Email" required />
-                        </div>
-                        <ValidationError
-                            prefix="Email"
-                            field="email"
-                            errors={state.errors}
-                        />
+                        <form className={classes.myform} onSubmit={handleSubmit}>
+                            <div className={classes.inputFields}>
+                                <input id="email" type="email" name="email" placeholder="Email" required />
+                            </div>
+                            <ValidationError
+                                prefix="Email"
+                                field="email"
+                                errors={state.errors}
+                            />
 
 
-                        <div className={classes.inputFields}>
-                            <textarea placeholder="Message" id="message" name="message" required ></textarea>
-                        </div>
-                        <ValidationError
-                            prefix="Message"
-                            field="message"
-                            errors={state.errors}
-                        />
-                        <button type="submit" className={classes.btnSend} disabled={state.submitting}>
-                            envoyer
-                        </button>
-                    </form>
+                            <div className={classes.inputFields}>
+                                <textarea placeholder="Message" id="message" name="message" required ></textarea>
+                            </div>
+                            <ValidationError
+                                prefix="Message"
+                                field="message"
+                                errors={state.errors}
+                            />
+                            <button type="submit" className={classes.btnSend} disabled={state.submitting}>
+                                envoyer
+                            </button>
+                            {
+                                state.succeeded &&
+                                (
+                                    <Typography variant="h2" className={classes.sendMsg}>
+                                        message envoyé
+                                    </Typography>
+                                )
+                            }
+
+                        </form>
+                    </div>
                 </div>
-                </div>
-                
+
 
             </div>
         </div>

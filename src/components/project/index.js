@@ -25,6 +25,17 @@ const useStyles = makeStyles({
     fontFamily: 'Poppins-Regular',
     fontSize: 16,
     textAlign: 'center',
+  },
+  '@media screen and (max-width: 700px)': {
+    title:{
+      fontSize: 23
+    },
+    description:{
+      fontSize: 14
+    },
+    root:{
+      height: '100%'
+    }
   }
 })
 

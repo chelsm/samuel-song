@@ -16,7 +16,8 @@ const useStyles = makeStyles({
     copyright:{
         color: 'var(--flash-orange)',
         fontFamily: 'Poppins-Medium',
-        fontSize: 12
+        fontSize: 12, 
+        textAlign: 'center'
     }   
 
 })
